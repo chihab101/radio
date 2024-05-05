@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio-Chihab</title>
+      <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuaAgJpDhPYzKtPpG-D-peSTJGWFdq7KBiukZN9MwqeE4bethNdV2kLCwcEdML7WpphhyFZkY-N0c_hRC6yoRynhQKDMh9CJxifbvuUMnVhAg-q0bjS_XKGj9AbcTd0tSwM3p9ar0uXdvDZIMOb5tqTdl64FsUKWkxblhweiEoFFjhlPjNCd7DXF2CNho/s320/radio.pn">
+    <style>
+      body{
+       background-color: rgb(165, 127, 255);
+      }
+        main{
+            margin: 0;
+            padding: 0;
+            width: 360px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+       
+        header{
+            margin-top: 15px;
+            background-color: rgba(68, 68, 68, 0.26);
+            text-align: center;
+            color: rgb(0, 0, 0);
+            height: 290px;
+           border-radius: 10% 10% 0 0;
+        }
+        header img{
+            height: 200px;
+            margin-top: 5px;
+        }
+        header p{
+            font-size: 20px;
+            margin-top: 5px;
+            color: rgb(32, 32, 32);
+        }
+        header h2{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 5px 0%;
+            font-size: 25px;
+        }
+        #content{
+            height: 300px;
+         padding: 0;
+            background-color: rgb(196, 229, 255);
+            border-radius:0 0 10% 10%;
+          
+        }
+        #buttons{
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+        }
+        #buttons img{
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
+        #volume{
+            text-align: center;
+        }
+        #volume input{
+            width: 100%;
+        }
+#volume input {
+    width: 80%;
+}
+* {
+    margin: 0;
+}
+input[type="range" i]{
+   -webkit-appearance: none;
+   background-color: rgb(48, 46, 49);
+   height: 4px;
+   margin: 0;
+}
+#color{
+    text-align: center;
+    margin-top: 20px;
+}
+#color button{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}  
+#color1{
+    background-color: rgb(165, 127, 255);
+}
+#color2{
+  background-color: rgb(255, 168, 233);
+}
+#color3{
+background-color: rgb(255, 189, 89);
+}
+#color4{
+ background-color: rgb(106, 255, 255);
+}
+
+    </style>
+</head>
+<body>
+    <main id="player">
+  <header>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqSM0B5kuSG9MtczMPqeesbKvUuPf_i9IrZUxUvylafzVWrQtjmRUuloMHmo3iRK1JvpddxpXk_3LPZ6PuEghoEpaO7egGXOyHvgqGCIlMeu_sYE7Qw2d7GPPt0pJq1i3m5E7MgrsbRAzJRugwMdroBdPCDnHYD-IpKIVCtlhEa6PB_KC4kfBI2gM9wMk/s541/logo.png" alt="">
+    <h2>live radio</h2>
+    <p id="title_audio">radio 1</p>
+  </header>
+  <div id="content">
+    <article id="buttons"> 
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwi48_vclVdcxBM8XaxkaZh-Hda5qwbOpH_IYoE6NHWVspRA6pKNQm9dwow1EIneplqpitQj4ZbP7q5YF5eTBhZyDLQY2Bi71lY31eGL3cKoCJQU1dwDl6xlJH4DqH1ha8O69qVZnTsVgYatELtXq_xc9xm-GOnjcksfIJcRkoGpc2_fHsQWzf-SLbjVw/s256/left.png" id="back" id="back" alt="">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi44VK3eAqAaHPkP-Xh5rbigypXupuyhdp1GtmPA0rshfAMNJIfDpA1dYf202RVZZgWOM3aRKvgh7o81PWa6ElXcLQYIUbb0DOn_rWJAzzyyKqyA3GVuP4vM5WANns5HBSIrn3-1Pp1KsMvoPEhBFksn0Kjaexm_-d5ujRGnJQkYBorHMhHbntqagDGZgU/s320/play.png" id="play_button" alt="">
+       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjd23IECuH8srdeiA_tR4F_7YhcVhU6u-4IG2K4Sot-q9_YnZTalMcxzxbuZzA_aWyhX57uotg3STHKvJlbunZ7641LvhkuzLlksg23I7A_Ke3w8CA_1-T2082i3laVRqH2ucSjKoyO5wOd3YWzAGG3rHwVzPgAZ4BfXF6KQBEh3EtTwFNoOVTNVgebETs/s256/right.png" id="next" id="next" alt="">
+        <audio src="albnsir.mp3" id="audio_file"></audio>
+       
+    </article>
+    <article id="volume">
+        <h2>الصوت</h2>
+        <input type="range" id="volume_range">
+        <h2>السرعة</h2>
+        <input type="range" id="volume_speed" max="200" min="0">
+    </article>
+    <article id="color">
+        <button id="color1"></button>
+        <button id="color2"></button>
+        <button id="color3"></button>
+        <button id="color4"></button>
+    </article>
+  </div>
+    </main>
+    <script>
+       class Player{
+        constructor(){
+   var heightMain = document.getElementById("player");
+   heightMain.style.height = screen.height + "px";
+
+   if(screen.width<500){
+heightMain.style.width = screen.width + "px";
+   }
+
+   var heightDiv = document.getElementById("content");
+   heightDiv.style.height = screen.height-400 + "px";
+
+        }
+    }
+        onload = new Player();
+        //class buttons 
+        class Audio_player{
+             constructor(){
+              
+
+               this.audio_file = document.getElementById("audio_file");
+               this.title_audio = document.getElementById("title_audio");
+               this.play_button = document.getElementById("play_button");
+               this.next = document.getElementById("next");
+               this.back = document.getElementById("back");
+               this.isPlayed;
+               this.play_button.addEventListener("click", ()=>{
+                   this.play_pause();
+               });
+
+               
+
+             this.names_radio =[];
+             this.names_radio[0]="Radio algeria";
+             this.names_radio[1]="Radio Morocco";
+             this.names_radio[2]="Radio tunisia";
+
+               this.source_audio =[];
+               this.source_audio[0]= "https://webradio.tda.dz/Chaine1_64K.mp3";
+               this.source_audio[1]= "http://broadcast.ice.infomaniak.ch/aswat-high.mp3";
+               this.source_audio[2]= "https://live.ifm.tn/radio/8000/ifmlive?1585267848";
+               this.server = 0;
+
+               this.setResource();
+               document.getElementById("next").addEventListener("click",()=>{
+      if(this.server<this.source_audio.length-1){
+          ++this.server;
+          this.isPlayed = false;
+      }else{
+        this.server=0;
+      }
+      localStorage.setItem("save_channel",this.server);
+        this.setResource();
+               });
+
+               document.getElementById("back").addEventListener("click",()=>{
+                if(this.server>0){
+                --this.server;
+                this.isPlayed = false;
+                }else{
+                    this.server=this.source_audio.length-1;
+                }
+                localStorage.setItem("save_channel",this.server);
+                this.setResource();
+            });
+
+             }
+
+             setResource(){
+                if(localStorage.getItem("save_channel")!=null){
+                  this.server= localStorage.getItem("save_channel");
+                }
+                this.audio_file.src = this.source_audio[this.server];
+                this.title_audio.innerHTML = this.names_radio[this.server];
+                 this.play_pause();
+             }
+    
+
+
+             play_pause(){
+                 if(this.isPlayed == false){
+                   this.audio_file.play();
+                   this.isPlayed=true;
+                   this.play_button.src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjswqhAGrIJbMNwuzHYp0g2LN7Blh7sxGm9zlkCT4OFjJFdKPixXAsnq7lTvBmzhCm52NKg2eILleI_RbRK03LpqW-u9O4oD0tRCWJM0E5N_RIiCOd1U2iyDMQIEt6-SvbQODDib2MZF1cKfHytAZcXdWV-6v7PhmnTC_NAtJfgb-Ic05fQwUJVsvf1IB0/s320/pause.png";
+                 }else{
+                    this.audio_file.pause();
+                    this.isPlayed=false;
+                    this.play_button.src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi44VK3eAqAaHPkP-Xh5rbigypXupuyhdp1GtmPA0rshfAMNJIfDpA1dYf202RVZZgWOM3aRKvgh7o81PWa6ElXcLQYIUbb0DOn_rWJAzzyyKqyA3GVuP4vM5WANns5HBSIrn3-1Pp1KsMvoPEhBFksn0Kjaexm_-d5ujRGnJQkYBorHMhHbntqagDGZgU/s320/play.png";
+                 }
+             }
+        }
+onload = new Audio_player();
+
+
+
+
+class Volume{
+    constructor(){
+   this.audio_file = document.getElementById("audio_file");
+   this.audio_file.volume = 50/100;
+
+   this.vbolume_range = document.getElementById("volume_range");
+   this.vbolume_range.addEventListener("change",()=>{
+    this.audio_file.volume= this.vbolume_range.value/100;
+   });
+
+   this.vbolume_range = document.getElementById("volume_range");
+   this.vbolume_range.addEventListener("change",()=>{
+    this.audio_file.volume= this.vbolume_range.value/100;
+   });
+    
+   this.vbolume_speed = document.getElementById("volume_speed");
+   this.vbolume_speed.addEventListener("change",()=>{
+    this.audio_file.playbackRate= this.vbolume_speed.value/100;
+   });
+    }
+    }
+
+
+onload = new Volume();
+
+
+class Color{
+    constructor(){
+      this.color1 = document.getElementById("color1");
+      this.color1.addEventListener("click",()=>{
+      this.select_color("color1");
+      });
+
+      
+        this.color2 = document.getElementById("color2");
+        this.color2.addEventListener("click",()=>{
+        this.select_color("color2");
+        });
+
+        
+            this.color3 = document.getElementById("color3");
+            this.color3.addEventListener("click",()=>{
+            this.select_color("color3");
+            });
+
+           
+                this.color4 = document.getElementById("color4");
+                this.color4.addEventListener("click",()=>{
+                this.select_color("color4");
+                });
+                if(localStorage.getItem("COLOR")==null){
+document.body.style.background = "rgb(165, 127, 255)";
+                }
+                this.select_color(localStorage.getItem("COLOR"))
+    }
+    select_color(color){
+if(color=="color1"){
+document.body.style.background = "rgb(165, 127, 255)";
+}else if(color=="color2"){
+    document.body.style.background = "rgb(255, 168, 233)";
+    }else if(color=="color3"){
+        document.body.style.background = "rgb(255, 189, 89)";
+        }else if(color=="color4"){
+            document.body.style.background = "rgb(106, 255, 255)";
+            }
+         localStorage.setItem("COLOR",color)   
+}
+}
+onload = new Color();
+    
+        
+
+
+    </script>
+</body>
+</html>
